@@ -1,37 +1,45 @@
-/* Estilos Gerais */
+/* ==================================== */
+/* NOVO style.css (Baseado na Imagem)   */
+/* ==================================== */
+
+/* Definição das cores baseadas no design da imagem */
 :root {
-    --cor-primaria: #007bff; /* Azul */
-    --cor-secundaria: #6c757d; /* Cinza */
-    --fundo-claro: #f8f9fa; /* Fundo muito claro */
-    --texto-claro: #212529; /* Texto escuro */
-    --card-fundo-claro: #ffffff; /* Fundo dos blocos/cards */
+    --cor-fundo-principal: #385C50;     /* Verde Musgo Escuro */
+    --cor-fundo-secundario: #f8f9fa;   /* Branco/Cinza Claro (para seção Hello) */
+    --cor-destaque: #E6B847;           /* Amarelo Mostarda/Ouro */
+    --cor-texto-claro: #f8f9fa;         /* Texto em áreas escuras */
+    --cor-texto-escuro: #212529;        /* Texto em áreas claras */
+    --cor-marrom-detalhe: #73574A;      /* Marrom para botões/rodapé */
+    --cor-sombra: rgba(0, 0, 0, 0.15);
+    --fonte-principal: 'Arial', sans-serif;
 }
 
-/* Tema Escuro (ativado pelo JS) */
+/* Tema Escuro Adaptado (mantém o contraste) */
 .dark-mode {
-    --cor-primaria: #66ccff; /* Azul mais claro */
-    --cor-secundaria: #adb5bd; /* Cinza claro */
-    --fundo-claro: #212529; /* Fundo escuro */
-    --texto-claro: #f8f9fa; /* Texto claro */
-    --card-fundo-claro: #343a40; /* Fundo dos blocos/cards */
+    --cor-fundo-principal: #1f332c;      /* Verde ainda mais escuro */
+    --cor-fundo-secundario: #2c443b;    /* Verde escuro para blocos */
+    --cor-destaque: #ffc107;            /* Amarelo mais vibrante */
+    --cor-texto-claro: #ffffff;
+    --cor-texto-escuro: #f8f9fa;
+    --cor-marrom-detalhe: #9c8479;
 }
+
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--fonte-principal);
     margin: 0;
     padding: 0;
-    background-color: var(--fundo-claro);
-    color: var(--texto-claro);
-    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-claro);
+    transition: background-color 0.5s, color 0.5s;
     line-height: 1.6;
 }
 
-/* Cabeçalho e Navegação */
+/* --- Cabeçalho e Navegação (Estilo Limpo) --- */
 header {
-    background-color: var(--cor-primaria);
-    color: white;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-claro);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -39,15 +47,15 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Alinha links à direita, como na imagem */
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 nav a, nav button {
-    color: white;
+    color: var(--cor-texto-claro);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -55,115 +63,182 @@ nav a, nav button {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 nav a:hover, nav button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--cor-marrom-detalhe);
 }
 
-/* Seção Principal */
+/* Botão Mudar Tema (Posicionado à esquerda, separado) */
+nav button:first-child {
+    margin-right: auto; 
+    border: 2px solid var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+
+nav button:first-child:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
+}
+
+/* --- Seção Principal e Layout --- */
 main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
 }
 
-/* Estilo do Perfil (Topo) */
+/* Estilo do Perfil (Topo - Hello I'm Han!) */
 .perfil {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background-color: var(--card-fundo-claro);
-    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-texto-escuro);
+    padding: 4rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: 2rem;
+    box-shadow: 0 8px 16px var(--cor-sombra);
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden; /* Para conter elementos de fundo */
 }
 
 .perfil-info {
-    text-align: center;
+    text-align: left;
+    order: 2; /* Move a foto e contato para a segunda coluna */
+}
+
+.perfil-descricao {
+    order: 1;
+}
+
+.perfil-descricao h1 {
+    font-size: 3.5rem;
+    margin: 0 0 0.5rem 0;
+    line-height: 1;
+    color: var(--cor-texto-escuro);
+}
+.perfil-descricao h2 {
+    color: var(--cor-marrom-detalhe);
+    font-size: 1.5rem;
+    margin-top: 0;
 }
 
 .foto-placeholder {
-    width: 150px;
-    height: 150px;
-    background-color: var(--cor-secundaria);
-    border-radius: 50%;
-    margin: 1rem auto;
+    width: 250px;
+    height: 300px;
+    background-color: var(--cor-marrom-detalhe);
+    border-radius: 5px;
+    margin: 0 auto 1rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    overflow: hidden; /* Para garantir que sua futura imagem caiba */
-    /* Se você usar uma imagem, adicione: */
-    /* background-image: url('perfil.jpg');
-    background-size: cover;
-    background-position: center; */
+    /* Imagem na imagem de referência é cortada de forma irregular, mas usaremos um bloco simples. */
 }
 
-.perfil-descricao h1 {
-    color: var(--cor-primaria);
-}
-
-/* Estilo das Seções de Conteúdo */
+/* Estilo das Seções de Conteúdo (Cards Verdes/Amarelos) */
 .conteudo {
-    background-color: var(--card-fundo-claro);
-    padding: 2rem;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-claro);
+    padding: 3rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px var(--cor-sombra);
     margin-top: 2rem;
+    border: 1px solid var(--cor-marrom-detalhe); /* Contorno sutil */
 }
 
 .conteudo h2 {
-    color: var(--cor-primaria);
-    border-bottom: 2px solid var(--cor-primaria);
+    color: var(--cor-destaque);
+    font-size: 2rem;
+    border-bottom: 2px solid var(--cor-destaque);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
+}
+.conteudo h3 {
+    color: var(--cor-texto-claro);
+    margin-top: 2rem;
 }
 
 /* Botões */
 button {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-marrom-detalhe);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
 }
 
-/* Lista de Habilidades */
+/* --- Seções Específicas --- */
+
+/* Bloco Amarelo para Destaque (Estilo Experience/Skills) */
+#ti, #trabalho, #igreja {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
+}
+#ti h2, #trabalho h2, #igreja h2 {
+    border-bottom-color: var(--cor-marrom-detalhe);
+    color: var(--cor-texto-escuro);
+}
+#ti h3, #trabalho h3, #igreja h3 {
+    color: var(--cor-texto-escuro);
+}
+#ti li {
+    background-color: var(--cor-marrom-detalhe) !important;
+    color: white !important;
+    border: none !important;
+}
+#ti button, #trabalho button {
+    background-color: var(--cor-marrom-detalhe);
+    color: white;
+}
+#ti button:hover, #trabalho button:hover {
+    background-color: var(--cor-texto-escuro);
+}
+
+
+/* Lista de Habilidades (Tags) */
 #listaHabilidades {
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 #listaHabilidades li {
-    background-color: var(--fundo-claro);
-    color: var(--cor-primaria);
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: 1px solid var(--cor-primaria);
+    background-color: var(--cor-fundo-principal); /* Verde */
+    color: var(--cor-texto-claro);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Vídeo de Vôlei */
 .video-container {
     position: relative;
     width: 100%;
-    /* 16:9 Aspect Ratio */
     padding-bottom: 56.25%; 
     height: 0;
     margin: 1rem 0;
+    box-shadow: 0 4px 10px var(--cor-sombra);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .video-container iframe {
@@ -180,6 +255,7 @@ button:hover {
     display: block;
     margin-top: 1rem;
     font-weight: bold;
+    color: var(--cor-texto-claro);
 }
 
 #formularioContato input[type="email"],
@@ -187,49 +263,68 @@ button:hover {
     width: 100%;
     padding: 10px;
     margin-top: 0.5rem;
-    border: 1px solid var(--cor-secundaria);
+    border: 1px solid var(--cor-destaque);
     border-radius: 5px;
-    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
-    background-color: var(--fundo-claro);
-    color: var(--texto-claro);
-}
-
-#formularioContato textarea {
-    resize: vertical;
-    min-height: 150px;
+    box-sizing: border-box;
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-texto-escuro);
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 1.5rem;
-    background-color: var(--cor-secundaria);
+    padding: 2rem;
+    background-color: var(--cor-marrom-detalhe);
     color: white;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    .perfil {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-    
-    nav a, nav button {
-        flex-grow: 1;
-        text-align: center;
-    }
+footer button {
+    background-color: var(--cor-fundo-principal);
+    margin-top: 0.5rem;
+}
+footer button:hover {
+    background-color: var(--cor-destaque);
 }
 
 /* Estilo para destaque da frase (usado pelo JS) */
 .destaque {
-    color: #ffc107; /* Amarelo */
+    color: #ff0000; /* Vermelho forte para contrastar com o Amarelo/Verde */
     font-weight: bold;
     font-style: italic;
     transition: color 0.3s;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 900px) {
+    .perfil {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    .perfil-info {
+        order: 1; /* Foto/Contato no topo em mobile */
+    }
+    .perfil-descricao {
+        order: 2;
+    }
+    .foto-placeholder {
+        margin: 0 auto 1.5rem auto;
+    }
+    nav {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+    nav a, nav button {
+        flex-grow: 1;
+        text-align: center;
+        margin: 0.25rem 0;
+    }
+    nav button:first-child {
+        margin-right: 0;
+        width: 100%;
+    }
 }
