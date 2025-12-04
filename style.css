@@ -340,3 +340,63 @@ footer button:hover {
 /* CORREÇÃO: Removemos o bloco .foto-placeholder-sm completo, 
    pois o estilo da imagem é definido diretamente no HTML para flexibilidade, 
    e agora não queremos um fundo marrom fixo. */
+   /* ... (Seu código CSS anterior) ... */
+
+/* Estilo do Perfil (Topo - Hello I'm Han!) - Fundo Claro/Branco */
+.perfil {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-texto-escuro); /* Texto escuro em fundo claro */
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px var(--cor-sombra);
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden; 
+}
+/* CORREÇÃO: Centraliza o texto e os elementos na descrição */
+.perfil-descricao {
+    order: 1;
+    /* Adicionado: Centraliza conteúdo de texto */
+    text-align: center;
+    /* Adicionado: Centraliza itens (como o botão) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; /* Centraliza verticalmente (opcional) */
+}
+
+/* CORREÇÃO: Centraliza a imagem e o texto do Perfil Info */
+.perfil-info {
+    order: 2;
+    text-align: center; /* Centraliza todos os itens de texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza a foto horizontalmente */
+    justify-content: center; /* Centraliza verticalmente (opcional) */
+}
+
+/* ... (O restante do seu código CSS) ... */
+
+/* E certifique-se de que a Media Query para mobile está correta */
+@media (max-width: 900px) {
+    /* ... (Media Query inalterado) ... */
+    .perfil {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    .perfil-info {
+        order: 1; 
+    }
+    .perfil-descricao {
+        order: 2;
+        /* Garante que o alinhamento de texto se mantenha centralizado em mobile */
+        text-align: center; 
+        align-items: center;
+    }
+    /* ... (O restante da Media Query) ... */
+}
