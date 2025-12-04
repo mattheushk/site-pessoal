@@ -1,1 +1,72 @@
+* {
+color: white;
+}
 
+
+nav ul {
+display: flex;
+justify-content: center;
+list-style: none;
+gap: 30px;
+margin-top: 15px;
+}
+
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+transition: 0.3s;
+}
+nav a:hover {
+opacity: 0.8;
+}
+
+
+.hero {
+background: url('IMG-HERO-AQUI.jpg') no-repeat center/cover;
+height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+text-shadow: 1px 1px 8px black;
+}
+
+
+.secao {
+margin: 50px auto;
+padding: 20px;
+max-width: 900px;
+background: white;
+border-radius: 12px;
+box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+
+.imagem-slot {
+margin-top: 20px;
+height: 200px;
+background: #ddd;
+border: 2px dashed #888;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: 0.3s;
+}
+
+
+.imagem-slot:hover {
+background: #ccc;
+}
+
+
+footer {
+text-align: center;
+padding: 20px;
+margin-top: 30px;
+background: #222;
+color: white;
+}
