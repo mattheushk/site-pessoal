@@ -1,5 +1,5 @@
 /* ==================================== */
-/* NOVO style.css (Baseado na Imagem)   */
+/* style.css CORRIGIDO (Visibilidade e Design da Imagem) */
 /* ==================================== */
 
 /* Definição das cores baseadas no design da imagem */
@@ -7,8 +7,8 @@
     --cor-fundo-principal: #385C50;     /* Verde Musgo Escuro */
     --cor-fundo-secundario: #f8f9fa;   /* Branco/Cinza Claro (para seção Hello) */
     --cor-destaque: #E6B847;           /* Amarelo Mostarda/Ouro */
-    --cor-texto-claro: #f8f9fa;         /* Texto em áreas escuras */
-    --cor-texto-escuro: #212529;        /* Texto em áreas claras */
+    --cor-texto-claro: #f8f9fa;         /* Texto em áreas escuras (Verde/Marrom) */
+    --cor-texto-escuro: #212529;        /* Texto em áreas claras (Branco/Amarelo) */
     --cor-marrom-detalhe: #73574A;      /* Marrom para botões/rodapé */
     --cor-sombra: rgba(0, 0, 0, 0.15);
     --fonte-principal: 'Arial', sans-serif;
@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--cor-fundo-principal);
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto-claro); /* Padrão de texto é claro (branco) */
     transition: background-color 0.5s, color 0.5s;
     line-height: 1.6;
 }
@@ -47,7 +47,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-end; /* Alinha links à direita, como na imagem */
+    justify-content: flex-end; 
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -56,6 +56,7 @@ nav {
 
 nav a, nav button {
     color: var(--cor-texto-claro);
+    /* ... (restante do estilo de navegação inalterado) ... */
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -72,7 +73,7 @@ nav a:hover, nav button:hover {
     background-color: var(--cor-marrom-detalhe);
 }
 
-/* Botão Mudar Tema (Posicionado à esquerda, separado) */
+/* Botão Mudar Tema */
 nav button:first-child {
     margin-right: auto; 
     border: 2px solid var(--cor-destaque);
@@ -91,24 +92,24 @@ main {
     padding: 2rem 2rem;
 }
 
-/* Estilo do Perfil (Topo - Hello I'm Han!) */
+/* Estilo do Perfil (Topo - Hello I'm Han!) - Fundo Claro/Branco */
 .perfil {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     background-color: var(--cor-fundo-secundario);
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-escuro); /* Texto escuro em fundo claro */
     padding: 4rem;
     border-radius: 10px;
     box-shadow: 0 8px 16px var(--cor-sombra);
     margin-bottom: 3rem;
     position: relative;
-    overflow: hidden; /* Para conter elementos de fundo */
+    overflow: hidden; 
 }
-
+/* ... (restante do estilo de perfil inalterado) ... */
 .perfil-info {
     text-align: left;
-    order: 2; /* Move a foto e contato para a segunda coluna */
+    order: 2; 
 }
 
 .perfil-descricao {
@@ -137,10 +138,9 @@ main {
     align-items: center;
     justify-content: center;
     color: white;
-    /* Imagem na imagem de referência é cortada de forma irregular, mas usaremos um bloco simples. */
 }
 
-/* Estilo das Seções de Conteúdo (Cards Verdes/Amarelos) */
+/* Estilo das Seções de Conteúdo - Padrão Verde */
 .conteudo {
     background-color: var(--cor-fundo-principal);
     color: var(--cor-texto-claro);
@@ -148,7 +148,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--cor-sombra);
     margin-top: 2rem;
-    border: 1px solid var(--cor-marrom-detalhe); /* Contorno sutil */
+    border: 1px solid var(--cor-marrom-detalhe); 
 }
 
 .conteudo h2 {
@@ -163,10 +163,11 @@ main {
     margin-top: 2rem;
 }
 
-/* Botões */
+/* Botões (Padrão Marrom) */
 button {
     background-color: var(--cor-marrom-detalhe);
     color: white;
+    /* ... (restante do estilo de botão inalterado) ... */
     border: none;
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
@@ -182,31 +183,35 @@ button:hover {
     color: var(--cor-texto-escuro);
 }
 
-/* --- Seções Específicas --- */
+/* --- Seções Específicas: TI (DS), Trabalho, Igreja (Blocos Amarelos) --- */
 
-/* Bloco Amarelo para Destaque (Estilo Experience/Skills) */
 #ti, #trabalho, #igreja {
     background-color: var(--cor-destaque);
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-escuro); /* CORREÇÃO: Texto deve ser escuro em fundo amarelo */
 }
 #ti h2, #trabalho h2, #igreja h2 {
     border-bottom-color: var(--cor-marrom-detalhe);
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-escuro); /* CORREÇÃO: Título deve ser escuro */
 }
 #ti h3, #trabalho h3, #igreja h3 {
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-escuro); /* CORREÇÃO: Subtítulo deve ser escuro */
 }
+
+/* Tags de Habilidade */
 #ti li {
     background-color: var(--cor-marrom-detalhe) !important;
     color: white !important;
     border: none !important;
 }
+
+/* Botões nas Seções Amarelas */
 #ti button, #trabalho button {
     background-color: var(--cor-marrom-detalhe);
     color: white;
 }
 #ti button:hover, #trabalho button:hover {
     background-color: var(--cor-texto-escuro);
+    color: white; /* Mantém a cor do texto clara no hover para contraste */
 }
 
 
@@ -220,7 +225,7 @@ button:hover {
 }
 
 #listaHabilidades li {
-    background-color: var(--cor-fundo-principal); /* Verde */
+    background-color: var(--cor-fundo-principal); 
     color: var(--cor-texto-claro);
     padding: 5px 12px;
     border-radius: 20px;
@@ -231,6 +236,7 @@ button:hover {
 
 /* Vídeo de Vôlei */
 .video-container {
+    /* ... (Estilo inalterado) ... */
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; 
@@ -242,6 +248,7 @@ button:hover {
 }
 
 .video-container iframe {
+    /* ... (Estilo inalterado) ... */
     position: absolute;
     top: 0;
     left: 0;
@@ -251,11 +258,15 @@ button:hover {
 }
 
 /* Formulário de Contato */
+#contato {
+    background-color: var(--cor-fundo-principal); /* Garante que a seção contato seja verde */
+}
+
 #formularioContato label {
     display: block;
     margin-top: 1rem;
     font-weight: bold;
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto-claro); /* CORREÇÃO: Texto do label deve ser claro no fundo verde */
 }
 
 #formularioContato input[type="email"],
@@ -267,7 +278,7 @@ button:hover {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: var(--cor-fundo-secundario);
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-escuro); /* CORREÇÃO: Texto do input/textarea deve ser escuro */
 }
 
 /* Rodapé */
@@ -290,7 +301,7 @@ footer button:hover {
 
 /* Estilo para destaque da frase (usado pelo JS) */
 .destaque {
-    color: #ff0000; /* Vermelho forte para contrastar com o Amarelo/Verde */
+    color: #ff0000; 
     font-weight: bold;
     font-style: italic;
     transition: color 0.3s;
@@ -298,6 +309,7 @@ footer button:hover {
 
 /* --- Media Queries para Responsividade --- */
 @media (max-width: 900px) {
+    /* ... (Media Query inalterado) ... */
     .perfil {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -305,7 +317,7 @@ footer button:hover {
         text-align: center;
     }
     .perfil-info {
-        order: 1; /* Foto/Contato no topo em mobile */
+        order: 1; 
     }
     .perfil-descricao {
         order: 2;
