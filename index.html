@@ -26,10 +26,10 @@
         
         <section class="perfil">
             <div class="perfil-info">
-                <h1 id="nomeUsuario">Seu Nome Completo</h1>
+                <h1 id="nomeUsuario">Mattheus Krainski</h1>
                 <p id="profissaoUsuario">Desenvolvedor de Sistemas em Formação | Atleta de Vôlei</p>
                 <div class="foto-placeholder" id="fotoPerfil">
-                    <p>corrida.jpeg id="fotoPerfil</p>
+                    <img src="corrida.jpeg" alt="Foto de Perfil de Mattheus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
                 </div>
             </div>
             <div class="perfil-descricao">
@@ -58,17 +58,40 @@
             
             <h3>Meus Melhores Momentos</h3>
             <div class="video-container">
-                <iframe id="videoVolei" width="560" height="315" src="VID-20250410-WA0048.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <video id="videoVolei" width="100%" height="100%" controls preload="metadata">
+                    <source src="VID-20250410-WA0048.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
             </div>
             
             <p>Posição: Levantador</p>
-        
+            
+            <h3>Foto em Ação</h3>
+            <div class="foto-placeholder foto-placeholder-sm" style="width: 100%; height: 200px; margin-top: 1rem;">
+                <p>Espaço para uma Foto de Vôlei</p>
+            </div>
         </section>
 
         <section id="ti" class="conteudo">
             <h2>👨‍💻 TI (Desenvolvimento de Sistemas - DS)</h2>
             <p>Meu foco é em **Desenvolvimento de Sistemas**. Sou fascinado por transformar problemas complexos em soluções digitais eficientes.</p>
             
+            <h3>Projetos e Estudos</h3>
+            <div style="display: flex; gap: 10px; justify-content: space-around; flex-wrap: wrap;">
+                <div class="foto-placeholder foto-placeholder-sm" style="width: 150px; height: 100px;">
+                    <p>Foto Projeto 1</p>
+                </div>
+                <div class="foto-placeholder foto-placeholder-sm" style="width: 150px; height: 100px;">
+                    <p>Foto Projeto 2</p>
+                </div>
+                <div class="foto-placeholder foto-placeholder-sm" style="width: 150px; height: 100px;">
+                    <p>Foto Certificado</p>
+                </div>
+                <div class="foto-placeholder foto-placeholder-sm" style="width: 150px; height: 100px;">
+                    <p>Foto Aula/Estudo</p>
+                </div>
+            </div>
+
             <h3>Conhecimentos e Habilidades</h3>
             <ul id="listaHabilidades">
                 <li>Lógica de Programação</li>
@@ -83,12 +106,16 @@
             <h2>💼 Experiência Profissional</h2>
             <div class="experiencia-item">
                 <h3>Caixa</h3>
+                
+                <div class="foto-placeholder foto-placeholder-sm" style="float: right; margin-left: 15px; width: 120px; height: 120px; border-radius: 5px;">
+                    <p>Espaço para Foto do Trabalho</p>
+                </div>
+                
                 <p>Empresa: Essência Café e Bistro</p>
-            
                 <p>Principais Responsabilidades:Eu faço uma parte bem geral dentro do meu trabalho, porém a minha função é estar no caixa</p>
                 <button onclick="calcularTempoTrabalho('2022-01-01')">Calcular Tempo de Trabalho (JS)</button>
                 <p id="tempoTrabalhoResultado"></p>
-            </div>
+                <div style="clear: both;"></div> </div>
         </section>
 
         <section id="igreja" class="conteudo">
@@ -96,8 +123,12 @@
             <p>Participar da vida da igreja me ajuda a desenvolver valores importantes como serviço, liderança e empatia.</p>
             
             <h3>Meu Envolvimento</h3>
-            <p>Igreja: [Casa de Israel]</p>
+            <div class="foto-placeholder foto-placeholder-sm" style="width: 100%; height: 150px; margin-top: 1rem;">
+                <p>Espaço para Foto da Igreja</p>
+            </div>
             
+            <p>Igreja: Casa de Israel</p>
+            <p>Função/Ministério: [Seu papel/área de serviço. Ex: Diácono, Líder de Jovens, Louvor, etc.]</p>
         </section>
 
         <section id="contato" class="conteudo">
@@ -112,6 +143,7 @@
             <p>Ou me encontre em:</p>
             <p>Whats: https://web.whatsapp.com/</p>
             <p>Instagram: https://www.instagram.com/mattheuskrainski_/</p>
+            <p>GitHub: [Seu Link do GitHub]</p>
         </section>
 
     </main>

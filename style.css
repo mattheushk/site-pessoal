@@ -340,3 +340,20 @@ footer button:hover {
         width: 100%;
     }
 }
+/* Adicione isso ao SEU arquivo style.css */
+.foto-placeholder-sm {
+    background-color: var(--cor-marrom-detalhe); /* Usa a cor de detalhe para os placeholders menores */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Garante que o texto do placeholder menor não quebre o layout */
+.foto-placeholder-sm p {
+    font-size: 0.8rem;
+    margin: 0;
+}
