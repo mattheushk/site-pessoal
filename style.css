@@ -1,5 +1,5 @@
 /* ==================================== */
-/* style.css CORRIGIDO (Visibilidade e Design da Imagem) */
+/* style.css CORRIGIDO (Final para Imagens Ativas) */
 /* ==================================== */
 
 /* Definição das cores baseadas no design da imagem */
@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--cor-fundo-principal);
-    color: var(--cor-texto-claro); /* Padrão de texto é claro (branco) */
+    color: var(--cor-texto-claro); 
     transition: background-color 0.5s, color 0.5s;
     line-height: 1.6;
 }
@@ -56,7 +56,6 @@ nav {
 
 nav a, nav button {
     color: var(--cor-texto-claro);
-    /* ... (restante do estilo de navegação inalterado) ... */
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -92,13 +91,13 @@ main {
     padding: 2rem 2rem;
 }
 
-/* Estilo do Perfil (Topo - Hello I'm Han!) - Fundo Claro/Branco */
+/* Estilo do Perfil (Topo - Fundo Claro) */
 .perfil {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     background-color: var(--cor-fundo-secundario);
-    color: var(--cor-texto-escuro); /* Texto escuro em fundo claro */
+    color: var(--cor-texto-escuro); 
     padding: 4rem;
     border-radius: 10px;
     box-shadow: 0 8px 16px var(--cor-sombra);
@@ -106,7 +105,7 @@ main {
     position: relative;
     overflow: hidden; 
 }
-/* ... (restante do estilo de perfil inalterado) ... */
+
 .perfil-info {
     text-align: left;
     order: 2; 
@@ -128,16 +127,15 @@ main {
     margin-top: 0;
 }
 
+/* CORREÇÃO: Estilo do Contêiner da Foto (Removemos o background para ver a imagem) */
 .foto-placeholder {
     width: 250px;
     height: 300px;
-    background-color: var(--cor-marrom-detalhe);
+    /* CORREÇÃO: Removido background-color e display: flex */
     border-radius: 5px;
     margin: 0 auto 1rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    overflow: hidden; /* Garante que a imagem siga o border-radius */
+    box-shadow: 0 4px 8px var(--cor-sombra);
 }
 
 /* Estilo das Seções de Conteúdo - Padrão Verde */
@@ -167,7 +165,6 @@ main {
 button {
     background-color: var(--cor-marrom-detalhe);
     color: white;
-    /* ... (restante do estilo de botão inalterado) ... */
     border: none;
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
@@ -187,14 +184,14 @@ button:hover {
 
 #ti, #trabalho, #igreja {
     background-color: var(--cor-destaque);
-    color: var(--cor-texto-escuro); /* CORREÇÃO: Texto deve ser escuro em fundo amarelo */
+    color: var(--cor-texto-escuro); 
 }
 #ti h2, #trabalho h2, #igreja h2 {
     border-bottom-color: var(--cor-marrom-detalhe);
-    color: var(--cor-texto-escuro); /* CORREÇÃO: Título deve ser escuro */
+    color: var(--cor-texto-escuro); 
 }
 #ti h3, #trabalho h3, #igreja h3 {
-    color: var(--cor-texto-escuro); /* CORREÇÃO: Subtítulo deve ser escuro */
+    color: var(--cor-texto-escuro); 
 }
 
 /* Tags de Habilidade */
@@ -211,7 +208,7 @@ button:hover {
 }
 #ti button:hover, #trabalho button:hover {
     background-color: var(--cor-texto-escuro);
-    color: white; /* Mantém a cor do texto clara no hover para contraste */
+    color: white; 
 }
 
 
@@ -236,7 +233,6 @@ button:hover {
 
 /* Vídeo de Vôlei */
 .video-container {
-    /* ... (Estilo inalterado) ... */
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; 
@@ -247,8 +243,9 @@ button:hover {
     overflow: hidden;
 }
 
-.video-container iframe {
-    /* ... (Estilo inalterado) ... */
+/* CORREÇÃO: Adicionamos estilo para o elemento <video> (e mantivemos o iframe para caso você mude) */
+.video-container iframe, 
+.video-container video { 
     position: absolute;
     top: 0;
     left: 0;
@@ -259,14 +256,14 @@ button:hover {
 
 /* Formulário de Contato */
 #contato {
-    background-color: var(--cor-fundo-principal); /* Garante que a seção contato seja verde */
+    background-color: var(--cor-fundo-principal); 
 }
 
 #formularioContato label {
     display: block;
     margin-top: 1rem;
     font-weight: bold;
-    color: var(--cor-texto-claro); /* CORREÇÃO: Texto do label deve ser claro no fundo verde */
+    color: var(--cor-texto-claro); 
 }
 
 #formularioContato input[type="email"],
@@ -278,7 +275,7 @@ button:hover {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: var(--cor-fundo-secundario);
-    color: var(--cor-texto-escuro); /* CORREÇÃO: Texto do input/textarea deve ser escuro */
+    color: var(--cor-texto-escuro); 
 }
 
 /* Rodapé */
@@ -309,7 +306,6 @@ footer button:hover {
 
 /* --- Media Queries para Responsividade --- */
 @media (max-width: 900px) {
-    /* ... (Media Query inalterado) ... */
     .perfil {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -340,20 +336,7 @@ footer button:hover {
         width: 100%;
     }
 }
-/* Adicione isso ao SEU arquivo style.css */
-.foto-placeholder-sm {
-    background-color: var(--cor-marrom-detalhe); /* Usa a cor de detalhe para os placeholders menores */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-}
 
-/* Garante que o texto do placeholder menor não quebre o layout */
-.foto-placeholder-sm p {
-    font-size: 0.8rem;
-    margin: 0;
-}
+/* CORREÇÃO: Removemos o bloco .foto-placeholder-sm completo, 
+   pois o estilo da imagem é definido diretamente no HTML para flexibilidade, 
+   e agora não queremos um fundo marrom fixo. */
