@@ -1,159 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio Profissional</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <button onclick="mudarTema()">Mudar Tema</button>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#volei">Vôlei</a>
-            <a href="#ti">TI (DS)</a>
-            <a href="#trabalho">Trabalho</a>
-            <a href="#igreja">Igreja</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+    <header>
+        <nav>
+            <button onclick="mudarTema()">Mudar Tema</button>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#volei">Vôlei</a>
+            <a href="#ti">TI (DS)</a>
+            <a href="#trabalho">Trabalho</a>
+            <a href="#igreja">Igreja</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-    <main id="inicio">
-        
-        <section class="perfil">
-            <div class="perfil-info">
-                <h1 id="nomeUsuario">Mattheus Krainski</h1>
-                <p id="profissaoUsuario">Desenvolvedor de Sistemas em Formação | Atleta de Vôlei</p>
-                <div class="foto-placeholder" id="fotoPerfil">
-                    <img src="corrida.jpeg" alt="Foto de Perfil de Mattheus em corrida" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-                </div>
-            </div>
-            <div class="perfil-descricao">
-                <h2>Bem-vindo(a) ao meu Portfólio!</h2>
-                <p id="fraseEfeito">Aqui você encontrará um resumo das minhas paixões, estudos e experiências.</p>
-                <button onclick="destacarFrase()">Destacar Frase</button>
-            </div>
-        </section>
+    <main id="inicio">
+        
+        <section class="perfil">
+            <div class="perfil-info">
+                <h1 id="nomeUsuario">Mattheus Krainski</h1>
+                <p id="profissaoUsuario">Desenvolvedor de Sistemas em Formação | Atleta de Vôlei</p>
+                <div class="foto-placeholder" id="fotoPerfil">
+                                        <img src="corrida.jpeg" alt="Foto de Perfil de Mattheus em corrida" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+            </div>
+            <div class="perfil-descricao">
+                <h2>Bem-vindo(a) ao meu Portfólio!</h2>
+                <p id="fraseEfeito">Aqui você encontrará um resumo das minhas paixões, estudos e experiências.</p>
+                <button onclick="destacarFrase()">Destacar Frase</button>
+            </div>
+        </section>
 
-        <section id="sobre" class="conteudo">
-            <h2>🌍 Sobre Mim</h2>
-            <div id="dadosPessoais">
-                <p>Olá! Eu sou Mattheus. Minha jornada é uma mistura de desenvolvimento de software e dedicação ao esporte.</p>
-                <p>Nasci em Curitiba e atualmente estudo **Desenvolvimento de Sistemas**, buscando sempre aplicar lógica e criatividade em tudo que faço.</p>
-                <button onclick="alternarVisibilidade('dadosPessoaisDetalhes')">Ver Mais Detalhes</button>
-                <div id="dadosPessoaisDetalhes" style="display:none;">
-                    <p>Hobbies: Jogar jogos, e muitas vezes com meus amigos</p>
-                    <p>Objetivo Profissional: Entrar na área de TI ou ser atleta de voleibol</p>
-                </div>
-            </div>
-        </section>
+        <section id="sobre" class="conteudo">
+            <h2>🌍 Sobre Mim</h2>
+            <div id="dadosPessoais">
+                <p>Olá! Eu sou Mattheus. Minha jornada é uma mistura de desenvolvimento de software e dedicação ao esporte.</p>
+                <p>Nasci em Curitiba e atualmente estudo **Desenvolvimento de Sistemas**, buscando sempre aplicar lógica e criatividade em tudo que faço.</p>
+                <button onclick="alternarVisibilidade('dadosPessoaisDetalhes')">Ver Mais Detalhes</button>
+                <div id="dadosPessoaisDetalhes" style="display:none;">
+                    <p>Hobbies: Jogar jogos, e muitas vezes com meus amigos</p>
+                    <p>Objetivo Profissional: Entrar na área de TI ou ser atleta de voleibol</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="volei" class="conteudo">
-            <h2>🏐 Vôlei</h2>
-            <p>O vôlei é uma grande paixão que me ensinou sobre trabalho em equipe, disciplina e resiliência.</p>
-            
-            <h3>Meus Melhores Momentos</h3>
-            <div class="video-container">
-                <video id="videoVolei" width="100%" height="100%" controls preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;">
-                    <source src="VID-20250410-WA0048.mp4" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo.
-                </video>
-            </div>
-            
-            <p>Posição: Levantador</p>
-            
-            <h3>Foto em Ação</h3>
-            <div class="foto-placeholder" style="width: 100%; height: 200px; margin-top: 1rem; padding: 0;">
-                <img src="image copy 7.png" alt="Mattheus jogando vôlei" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-            </div>
-        </section>
+        <section id="volei" class="conteudo">
+            <h2>🏐 Vôlei</h2>
+            <p>O vôlei é uma grande paixão que me ensinou sobre trabalho em equipe, disciplina e resiliência.</p>
+            
+            <h3>Meus Melhores Momentos</h3>
+            <div class="video-container">
+                <video id="videoVolei" width="100%" height="100%" controls preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;">
+                    <source src="VID-20250410-WA0048.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+            
+            <p>Posição: Levantador</p>
+            
+            <h3>Foto em Ação</h3>
+            <div class="foto-placeholder" style="width: 100%; height: 200px; margin-top: 1rem; padding: 0;">
+                                <img src="image copy 7.png" alt="Mattheus jogando vôlei" style="width: 100%; height: 100%; object-fit: contain; border-radius: 5px;">
+            </div>
+        </section>
 
-        <section id="ti" class="conteudo">
-            <h2>👨‍💻 TI (Desenvolvimento de Sistemas - DS)</h2>
-            <p>Meu foco é em **Desenvolvimento de Sistemas**. Sou fascinado por transformar problemas complexos em soluções digitais eficientes.</p>
-            
-            <h3>Projetos e Estudos</h3>
-            <div style="display: flex; gap: 10px; justify-content: space-around; flex-wrap: wrap;">
-                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
-                    <img src="curso lab d quimica.jpeg" alt="Foto Projeto 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-                </div>
-                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
-                    <img src="curso lab.jpeg" alt="Foto Projeto 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-                </div>
-                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
-                    <img src="curso na sala.jpeg" alt="Foto Certificado" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-                </div>
-                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
-                    <img src="image copy 5.png" alt="Foto Aula/Estudo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-                </div>
-            </div>
+        <section id="ti" class="conteudo">
+            <h2>👨‍💻 TI (Desenvolvimento de Sistemas - DS)</h2>
+            <p>Meu foco é em **Desenvolvimento de Sistemas**. Sou fascinado por transformar problemas complexos em soluções digitais eficientes.</p>
+            
+            <h3>Projetos e Estudos</h3>
+            <div style="display: flex; gap: 10px; justify-content: space-around; flex-wrap: wrap;">
+                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
+                    <img src="curso lab d quimica.jpeg" alt="Foto Projeto 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
+                    <img src="curso lab.jpeg" alt="Foto Projeto 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
+                    <img src="curso na sala.jpeg" alt="Foto Certificado" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="foto-placeholder" style="width: 150px; height: 100px; padding: 0;">
+                    <img src="image copy 5.png" alt="Foto Aula/Estudo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+            </div>
 
-            <h3>Conhecimentos e Habilidades</h3>
-            <ul id="listaHabilidades">
-                <li>Lógica de Programação</li>
-                <li>Linguagem Ex: aprendendo JavaScript</li>
-                <li>Banco de Dados Ex: apredendo SQL </li>
-                <li>Desenvolvimento Web (HTML, CSS, JS)</li>
-            </ul>
-            <button onclick="adicionarHabilidade()">Adicionar Habilidade (JS)</button>
-        </section>
+            <h3>Conhecimentos e Habilidades</h3>
+            <ul id="listaHabilidades">
+                <li>Lógica de Programação</li>
+                <li>Linguagem Ex: aprendendo JavaScript</li>
+                <li>Banco de Dados Ex: apredendo SQL </li>
+                <li>Desenvolvimento Web (HTML, CSS, JS)</li>
+            </ul>
+            <button onclick="adicionarHabilidade()">Adicionar Habilidade (JS)</button>
+        </section>
 
-        <section id="trabalho" class="conteudo">
-            <h2>💼 Experiência Profissional</h2>
-            <div class="experiencia-item">
-                <h3>Caixa</h3>
-                
-                <div class="foto-placeholder" style="float: right; margin-left: 15px; width: 120px; height: 120px; border-radius: 5px; padding: 0;">
-                    <img src="image copy 2.png" alt="Mattheus no trabalho" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-                </div>
-                
-                <p>Empresa: Essência Café e Bistro</p>
-                <p>Principais Responsabilidades:Eu faço uma parte bem geral dentro do meu trabalho, porém a minha função é estar no caixa</p>
-                <button onclick="calcularTempoTrabalho('2022-01-01')">Calcular Tempo de Trabalho (JS)</button>
-                <p id="tempoTrabalhoResultado"></p>
-                <div style="clear: both;"></div> </div>
-        </section>
+        <section id="trabalho" class="conteudo">
+            <h2>💼 Experiência Profissional</h2>
+            <div class="experiencia-item">
+                <h3>Caixa</h3>
+                
+                <div class="foto-placeholder" style="float: right; margin-left: 15px; width: 120px; height: 120px; border-radius: 5px; padding: 0;">
+                    <img src="image copy 2.png" alt="Mattheus no trabalho" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                
+                <p>Empresa: Essência Café e Bistro</p>
+                <p>Principais Responsabilidades:Eu faço uma parte bem geral dentro do meu trabalho, porém a minha função é estar no caixa</p>
+                <button onclick="calcularTempoTrabalho('2022-01-01')">Calcular Tempo de Trabalho (JS)</button>
+                <p id="tempoTrabalhoResultado"></p>
+                <div style="clear: both;"></div> </div>
+        </section>
 
-        <section id="igreja" class="conteudo">
-            <h2>🙏 Igreja e célula</h2>
-            <p>Participar da vida da igreja me ajuda a desenvolver valores importantes como serviço, liderança e empatia.</p>
-            
-            <h3>Meu Envolvimento</h3>
-            <div class="foto-placeholder" style="width: 100%; height: 150px; margin-top: 1rem; padding: 0;">
-                 <img src="CELULA.jpeg" alt="Mattheus na Igreja ou em serviço voluntário" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-            </div>
-            
-            <p>Igreja: Casa de Israel</p>
-            <p>Função/Ministério: [Seu papel/área de serviço. Ex: Diácono, Líder de Jovens, Louvor, etc.]</p>
-        </section>
+        <section id="igreja" class="conteudo">
+            <h2>🙏 Igreja e célula</h2>
+            <p>Participar da vida da igreja me ajuda a desenvolver valores importantes como serviço, liderança e empatia.</p>
+            
+            <h3>Meu Envolvimento</h3>
+            <div class="foto-placeholder" style="width: 100%; height: 150px; margin-top: 1rem; padding: 0;">
+                                <img src="CELULA.jpeg" alt="Mattheus na Igreja ou em serviço voluntário" style="width: 100%; height: 100%; object-fit: contain; border-radius: 5px;">
+            </div>
+            
+            <p>Igreja: Casa de Israel</p>
+            <p>Função/Ministério: [Seu papel/área de serviço. Ex: Diácono, Líder de Jovens, Louvor, etc.]</p>
+        </section>
 
-        <section id="contato" class="conteudo">
-            <h2>📧 Entre em Contato</h2>
-            <form id="formularioContato">
-                <label for="email">Seu email:</label>
-                <input type="email" id="email" required>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" required></textarea>
-                <button type="submit" onclick="return validarFormulario(event)">Enviar Mensagem</button>
-            </form>
-            <p>Ou me encontre em:</p>
-            <p>Whats: https://web.whatsapp.com/</p>
-            <p>Instagram: https://www.instagram.com/mattheuskrainski_/</p>
-            <p>GitHub: [Seu Link do GitHub]</p>
-        </section>
+        <section id="contato" class="conteudo">
+            <h2>📧 Entre em Contato</h2>
+            <form id="formularioContato">
+                <label for="email">Seu email:</label>
+                <input type="email" id="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" required></textarea>
+                <button type="submit" onclick="return validarFormulario(event)">Enviar Mensagem</button>
+            </form>
+            <p>Ou me encontre em:</p>
+            <p>Whats: https://web.whatsapp.com/</p>
+            <p>Instagram: https://www.instagram.com/mattheuskrainski_/</p>
+            
+        </section>
 
-    </main>
+    </main>
 
-    <footer>
-        <p>&copy; 2025 - Portfólio de Mattheus.</p>
-        <button onclick="exibirDataHora()">Exibir Data e Hora</button>
-        <p id="dataHora"></p>
-    </footer>
+    <footer>
+        <p>&copy; 2025 - Portfólio de Mattheus.</p>
+        <button onclick="exibirDataHora()">Exibir Data e Hora</button>
+        <p id="dataHora"></p>
+    </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
