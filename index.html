@@ -28,8 +28,8 @@
             <div class="perfil-info">
                 <h1 id="nomeUsuario">Seu Nome Completo</h1>
                 <p id="profissaoUsuario">Desenvolvedor de Sistemas em Formação | Atleta de Vôlei</p>
-                <div class="corrida.jpeg id="fotoPerfil">
-                    <p>Espaço para sua Foto</p>
+                <div class="foto-placeholder" id="fotoPerfil">
+                    <p>corrida.jpeg id="fotoPerfil</p>
                 </div>
             </div>
             <div class="perfil-descricao">
@@ -42,12 +42,12 @@
         <section id="sobre" class="conteudo">
             <h2>🌍 Sobre Mim</h2>
             <div id="dadosPessoais">
-                <p>Olá! Eu sou [Mattheus]. Minha jornada é uma mistura de desenvolvimento de software e dedicação ao esporte.</p>
-                <p>Nasci em [Curitiba] e atualmente estudo **Desenvolvimento de Sistemas**, buscando sempre aplicar lógica e criatividade em tudo que faço.</p>
+                <p>Olá! Eu sou Mattheus. Minha jornada é uma mistura de desenvolvimento de software e dedicação ao esporte.</p>
+                <p>Nasci em Curitiba e atualmente estudo **Desenvolvimento de Sistemas**, buscando sempre aplicar lógica e criatividade em tudo que faço.</p>
                 <button onclick="alternarVisibilidade('dadosPessoaisDetalhes')">Ver Mais Detalhes</button>
                 <div id="dadosPessoaisDetalhes" style="display:none;">
-                    <p>Hobbies: [Jogar jogos, e muitas vezes com meus amigos]</p>
-                    <p>Objetivo Profissional: [Entrar na área de TI ou ser atleta de voleibol]</p>
+                    <p>Hobbies: Jogar jogos, e muitas vezes com meus amigos</p>
+                    <p>Objetivo Profissional: Entrar na área de TI ou ser atleta de voleibol</p>
                 </div>
             </div>
         </section>
@@ -61,7 +61,7 @@
                 <iframe id="videoVolei" width="560" height="315" src="VID-20250410-WA0048.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
-            <p>Posição: [Levantador]</p>
+            <p>Posição: Levantador</p>
         
         </section>
 
@@ -72,8 +72,8 @@
             <h3>Conhecimentos e Habilidades</h3>
             <ul id="listaHabilidades">
                 <li>Lógica de Programação</li>
-                <li>Linguagem [Ex: Python, Java, JavaScript]</li>
-                <li>Banco de Dados [Ex: SQL]</li>
+                <li>Linguagem Ex: aprendendo JavaScript</li>
+                <li>Banco de Dados Ex: apredendo SQL </li>
                 <li>Desenvolvimento Web (HTML, CSS, JS)</li>
             </ul>
             <button onclick="adicionarHabilidade()">Adicionar Habilidade (JS)</button>
@@ -82,10 +82,10 @@
         <section id="trabalho" class="conteudo">
             <h2>💼 Experiência Profissional</h2>
             <div class="experiencia-item">
-                <h3>[Caixa]</h3>
-                <p>Empresa: [Nome da Empresa]</p>
-                <p>Período: [Mês/Ano - Mês/Ano]</p>
-                <p>Principais Responsabilidades: [Eu faço uma parte bem geral dentro do meu trabalh, porém a minha função é estar no caixa]</p>
+                <h3>Caixa</h3>
+                <p>Empresa: Essência Café e Bistro</p>
+            
+                <p>Principais Responsabilidades:Eu faço uma parte bem geral dentro do meu trabalho, porém a minha função é estar no caixa</p>
                 <button onclick="calcularTempoTrabalho('2022-01-01')">Calcular Tempo de Trabalho (JS)</button>
                 <p id="tempoTrabalhoResultado"></p>
             </div>
@@ -103,21 +103,21 @@
         <section id="contato" class="conteudo">
             <h2>📧 Entre em Contato</h2>
             <form id="formularioContato">
-                <label for="email">Seu Email:</label>
+                <label for="email">operacaoamd@gmail.com:</label>
                 <input type="email" id="email" required>
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" required></textarea>
                 <button type="submit" onclick="return validarFormulario(event)">Enviar Mensagem</button>
             </form>
             <p>Ou me encontre em:</p>
-            <p>Whats: [Seu Link]</p>
-            <p>Instagram: [Seu Link]</p>
+            <p>Whats: https://web.whatsapp.com/</p>
+            <p>Instagram: https://www.instagram.com/mattheuskrainski_/</p>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 - Portfólio de [Mattheus].</p>
+        <p>&copy; 2025 - Portfólio de Mattheus.</p>
         <button onclick="exibirDataHora()">Exibir Data e Hora</button>
         <p id="dataHora"></p>
     </footer>
