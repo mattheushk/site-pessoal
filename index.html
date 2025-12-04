@@ -1,77 +1,128 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
 
+    <header>
+        <nav>
+            <button onclick="mudarTema()">Mudar Tema</button>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#volei">Vôlei</a>
+            <a href="#ti">TI (DS)</a>
+            <a href="#trabalho">Trabalho</a>
+            <a href="#igreja">Igreja</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-<!-- SOBRE MIM -->
-<section id="sobre" class="secao sobre">
-<div class="sobre-texto">
-<h2>Hello, I'm Mattheus!</h2>
-<p>Sou estudante de Desenvolvimento de Sistemas, atleta amador de vôlei e membro ativo da igreja. Gosto de tecnologia, estudo de forma autônoma e busco sempre crescer pessoal e espiritualmente.</p>
-</div>
-<div class="sobre-img">FOTO AQUI</div>
-</section>
+    <main id="inicio">
+        
+        <section class="perfil">
+            <div class="perfil-info">
+                <h1 id="nomeUsuario">Seu Nome Completo</h1>
+                <p id="profissaoUsuario">Desenvolvedor de Sistemas em Formação | Atleta de Vôlei</p>
+                <div class="foto-placeholder" id="fotoPerfil">
+                    <p>Espaço para sua Foto</p>
+                </div>
+            </div>
+            <div class="perfil-descricao">
+                <h2>Bem-vindo(a) ao meu Portfólio!</h2>
+                <p id="fraseEfeito">Aqui você encontrará um resumo das minhas paixões, estudos e experiências.</p>
+                <button onclick="destacarFrase()">Destacar Frase</button>
+            </div>
+        </section>
 
+        <section id="sobre" class="conteudo">
+            <h2>🌍 Sobre Mim</h2>
+            <div id="dadosPessoais">
+                <p>Olá! Eu sou [Seu Nome]. Minha jornada é uma mistura de desenvolvimento de software e dedicação ao esporte.</p>
+                <p>Nasci em [Sua Cidade] e atualmente estudo **Desenvolvimento de Sistemas**, buscando sempre aplicar lógica e criatividade em tudo que faço.</p>
+                <button onclick="alternarVisibilidade('dadosPessoaisDetalhes')">Ver Mais Detalhes</button>
+                <div id="dadosPessoaisDetalhes" style="display:none;">
+                    <p>Hobbies: [Seus Hobbies]</p>
+                    <p>Objetivo Profissional: [Seu Objetivo]</p>
+                </div>
+            </div>
+        </section>
 
-<!-- EDUCAÇÃO + HABILIDADES TÉCNICAS -->
-<section id="educacao" class="secao bloco-verde">
-<h2 class="sec-title">Educação</h2>
+        <section id="volei" class="conteudo">
+            <h2>🏐 Vôlei</h2>
+            <p>O vôlei é uma grande paixão que me ensinou sobre trabalho em equipe, disciplina e resiliência.</p>
+            
+            <h3>Meus Melhores Momentos</h3>
+            <div class="video-container">
+                <iframe id="videoVolei" width="560" height="315" src="https://www.youtube.com/embed/SUA27X0u-dY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <p>Posição: [Sua Posição no Vôlei]</p>
+            <p>Conquistas: [Principais Campeonatos/Títulos]</p>
+        </section>
 
+        <section id="ti" class="conteudo">
+            <h2>👨‍💻 TI (Desenvolvimento de Sistemas - DS)</h2>
+            <p>Meu foco é em **Desenvolvimento de Sistemas**. Sou fascinado por transformar problemas complexos em soluções digitais eficientes.</p>
+            
+            <h3>Conhecimentos e Habilidades</h3>
+            <ul id="listaHabilidades">
+                <li>Lógica de Programação</li>
+                <li>Linguagem [Ex: Python, Java, JavaScript]</li>
+                <li>Banco de Dados [Ex: SQL]</li>
+                <li>Desenvolvimento Web (HTML, CSS, JS)</li>
+            </ul>
+            <button onclick="adicionarHabilidade()">Adicionar Habilidade (JS)</button>
+        </section>
 
-<div class="linha">
-<div class="item">
-<h3>2024–2026 • Desenvolvimento de Sistemas</h3>
-<p>Programação, Banco de Dados, Redes, Web.</p>
-</div>
+        <section id="trabalho" class="conteudo">
+            <h2>💼 Experiência Profissional</h2>
+            <div class="experiencia-item">
+                <h3>[Seu Cargo Atual/Último]</h3>
+                <p>Empresa: [Nome da Empresa]</p>
+                <p>Período: [Mês/Ano - Mês/Ano]</p>
+                <p>Principais Responsabilidades: [Descrição das suas tarefas e conquistas no trabalho]</p>
+                <button onclick="calcularTempoTrabalho('2023-01-01')">Calcular Tempo de Trabalho (JS)</button>
+                <p id="tempoTrabalhoResultado"></p>
+            </div>
+        </section>
 
+        <section id="igreja" class="conteudo">
+            <h2>🙏 Igreja e Voluntariado</h2>
+            <p>Participar da vida da igreja me ajuda a desenvolver valores importantes como serviço, liderança e empatia.</p>
+            
+            <h3>Meu Envolvimento</h3>
+            <p>Igreja: [Nome da Sua Igreja/Organização]</p>
+            <p>Função/Ministério: [Seu papel/área de serviço. Ex: Diácono, Líder de Jovens, Louvor, etc.]</p>
+            <p>Aprendizados: [O que a experiência te ensinou sobre responsabilidade e comunidade]</p>
+        </section>
 
-<div class="item">
-<h3>Estudos Autônomos</h3>
-<p>JavaScript, UI/UX, Python, HTML/CSS, Segurança.</p>
-</div>
-</div>
+        <section id="contato" class="conteudo">
+            <h2>📧 Entre em Contato</h2>
+            <form id="formularioContato">
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" required></textarea>
+                <button type="submit" onclick="return validarFormulario(event)">Enviar Mensagem</button>
+            </form>
+            <p>Ou me encontre em:</p>
+            <p>LinkedIn: [Seu Link]</p>
+            <p>GitHub: [Seu Link]</p>
+        </section>
 
+    </main>
 
-<h2 class="sec-title space">Habilidades Técnicas</h2>
+    <footer>
+        <p>&copy; 2025 - Portfólio de [Seu Nome]. Feito com HTML, CSS e JavaScript.</p>
+        <button onclick="exibirDataHora()">Exibir Data e Hora (JS)</button>
+        <p id="dataHora"></p>
+    </footer>
 
-
-<div class="skills">
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>Python</span>
-<span>Banco de Dados</span>
-</div>
-</section>
-
-
-<!-- VÔLEI -->
-<section id="volei" class="secao bloco-amarelo">
-<h2 class="sec-title">Minha trajetória no Vôlei</h2>
-<p class="desc">Treino desde jovem e o esporte me trouxe disciplina, união e determinação.</p>
-<div class="img-grande">IMAGEM DO VÔLEI</div>
-</section>
-
-
-<!-- IGREJA -->
-<section id="igreja" class="secao bloco-bege">
-<h2 class="sec-title">Vida na Igreja</h2>
-<p class="desc">Minha fé faz parte essencial da minha vida. Participo de grupos, projetos e eventos cristãos.</p>
-<div class="img-grande">IMAGEM DA IGREJA</div>
-</section>
-
-
-<!-- CONTATO -->
-<section id="contato" class="secao contato">
-<h2>Contato</h2>
-<p>Email: seuemail@gmail.com</p>
-<p>Telefone: (00) 00000-0000</p>
-</section>
-
-
-<footer>
-© 2025 - Portfolio de Mattheus
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
