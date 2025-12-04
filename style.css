@@ -1,47 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
-padding: 50px;
-background: #314e2e;
-color: white;
-position: relative;
-}
-.hero h1 {
-font-size: 4rem;
-font-family: 'Playfair Display';
-}
-.hero-img {
-height: 300px;
-background: #d2986a;
-display: flex;
-justify-content: center;
-align-items: center;
-font-weight: bold;
-color: #fff;
-}
-.scroll {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&family=Poppins:wght@300;400;600&display=swap');
+.scroll-ball {
 position: absolute;
-bottom: 20px;
+bottom: 30px;
 left: 50%;
 transform: translateX(-50%);
-background: #ffb431;
-padding: 10px 20px;
-border-radius: 20px;
+background: #ffb432;
+padding: 12px 25px;
+border-radius: 50px;
+text-align: center;
 font-weight: bold;
+color: black;
 }
 
 
-/* SEÇÕES */
-.secao {
-padding: 60px;
+/* SEÇÕES GERAIS */
+.secao { padding: 70px; }
+.sec-title {
+font-family: 'Playfair Display';
+font-size: 2.3rem;
+margin-bottom: 25px;
 }
+
+
+/* SOBRE */
 .sobre {
 display: flex;
 justify-content: space-between;
 align-items: center;
 }
-.sobre .img {
-width: 300px;
-height: 350px;
-background: #214a35;
+.sobre-img {
+background: #1f3b29;
+width: 280px;
+height: 340px;
 color: white;
 display: flex;
 justify-content: center;
@@ -49,30 +39,44 @@ align-items: center;
 }
 
 
-.verde { background: #214a35; color: white; }
-.amarela { background: #ffb431; }
-.clara { background: #fff8ee; }
+/* BLOCOS DE CORES */
+.bloco-verde { background: #1f3b29; color: white; }
+.bloco-amarelo { background: #ffb432; }
+.bloco-bege { background: #fff9f0; }
 
 
+/* SKILLS */
+.skills span {
+background: #333;
+color: white;
+padding: 8px 15px;
+border-radius: 20px;
+margin-right: 10px;
+display: inline-block;
+}
+
+
+/* IMAGENS GRANDES */
 .img-grande {
 width: 100%;
 height: 250px;
-background: #d2986a;
+background: #c68558;
 display: flex;
 justify-content: center;
 align-items: center;
+color: white;
+font-size: 1.2rem;
+font-weight: bold;
 }
 
 
 /* CONTATO */
-.contato {
-text-align: center;
-}
+.contato { text-align: center; }
 
 
 footer {
-text-align: center;
-padding: 20px;
 background: #222;
 color: white;
+padding: 20px;
+text-align: center;
 }
